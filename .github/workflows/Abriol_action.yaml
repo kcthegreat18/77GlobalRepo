@@ -11,36 +11,31 @@ jobs:
     steps:
       - name: Print OS Runner
         run: |
-	  Write-Output "OS RUNNER TYPE"
-	  Write-Output "${{ runner.os }}"
+          Write-Output "OS RUNNER TYPE"
+          Write-Output "${{ runner.os }}"
 
       - name: Event name trigger
         run: |
-	  Write-Output "EVENT NAME"
-	  Write-Output "{{ github.event_name }}"
+          Write-Output "EVENT NAME"
+          Write-Output "${{ github.event_name }}"
 
       - name: Print name of branch
         run: |
-	  Write-Output "NAME OF BRANCH"
-	  Write-Output "{{ github.ref_name }}"
+          Write-Output "NAME OF BRANCH"
+          Write-Output "${{ github.ref_name }}"
 
       - name: Print name of GitHub repository
         run: |
-	  Write-Output "NAME OF REPOSITORY"
-	  Write-Output "{{ github.repository }}"
+          Write-Output "NAME OF REPOSITORY"
+          Write-Output "${{ github.repository }}"
 
       - name: List all files in GitHub workspace
         run: |
           Write-Output "=== FILES IN GITHUB WORKSPACE ==="
           Get-ChildItem -Path $env:GITHUB_WORKSPACE -Recurse
 
-
       - name: Print messages in PowerShell
         run: |
           Write-Output "Hello from PowerShell!"
           Write-Host "This prints to console output as well."
           echo "echo works as an alias for Write-Output in PowerShell"
-
-
-
-

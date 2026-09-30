@@ -31,7 +31,7 @@ jobs:
 
       - name: List all files in GitHub workspace
         run: |
-          Write-Output "=== FILES IN GITHUB WORKSPACE ==="
+          Write-Output "FILES IN WORKSPACE"
           Get-ChildItem -Path $env:GITHUB_WORKSPACE -Recurse
 
       - name: Print messages in PowerShell
